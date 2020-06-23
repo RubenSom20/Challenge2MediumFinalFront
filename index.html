@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medium</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="icon" href="https://cdn-static-1.medium.com/_/fp/icons/favicon-rebrand-medium.3Y6xpZ-0FSdWDnPM3hSBIA.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <header class="container mt-3">
+        <div class="row">
+            <div class="col-6">
+                <a href="index.html"><img class="d-none d-md-block cursor-hand" src="images/Logo.png" width="120" alt=""></a>
+                <a href="index.html"><img class="d-sm-block d-md-none cursor-hand" src="images/Logo_Movil.jpg" alt="LogoM" width="33px"></a>
+            </div>
+            <div class="col-6 d-flex justify-content-end">
+                <svg class="bi bi-search cursor-hand mr-3" width="17px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                        d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z" />
+                    <path fill-rule="evenodd"
+                        d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z" />
+                </svg>
+                <svg class="bi bi-bookmarks cursor-hand mr-3 btn-hidden" width="17px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                        d="M7 13l5 3V4a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v12l5-3zm-4 1.234l4-2.4 4 2.4V4a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v10.234z" />
+                    <path d="M14 14l-1-.6V2a1 1 0 0 0-1-1H4.268A2 2 0 0 1 6 0h6a2 2 0 0 1 2 2v12z" />
+                </svg>
+                <svg class="bi bi-bell cursor-hand mr-3" width="17px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2z" />
+                    <path fill-rule="evenodd"
+                        d="M8 1.918l-.797.161A4.002 4.002 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4.002 4.002 0 0 0-3.203-3.92L8 1.917zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5.002 5.002 0 0 1 13 6c0 .88.32 4.2 1.22 6z" />
+                </svg>
+                <!-- <button id="save-article" type="button" class="btn btn-light cursor-hand mr-3 btn-hidden btn-upgrade">Upgrade</button> -->
+                <a href="formulario.html" class="btn btn-light mr-3 btn-upgrade d-flex align-items-center">Create Post</a>
+                <img class="cursor-hand FotoPerfil" src="images/Ninomedium.jpeg" width="33px" height="33px" alt="FotoPerfil">
+            </div>
+        </div>
+    </header>
+    <div class="container-fluid parent-nav-sticky bg-white">
+        <div class="row">
+            <div class="col-10 offset-1">
+                <div class="my-3 ">
+                    <div class="horizontal-contenedor px-5 ">
+                        <div class="row">
+                            <div class="mr-2 cursor-hand nav-control left" onclick="scrollToLeft()">&LeftAngleBracket;</div>
+                            <ul class="list-scroll p-0 ">
+                                <li><a href="# ">HOME</a></li>
+                                <li><a href="#">POPULAR</a></li>
+                                <li><a href="# ">MOMENTUM</a></li>
+                                <li><a href="#">CORONAVIRUS</a></li>
+                                <li><a href="# ">ONEZERO</a></li>
+                                <li><a href="#">ELEMENTAL</a></li>
+                                <li><a href="# ">GEN</a></li>
+                                <li><a href="#">ZORA</a></li>
+                                <li><a href="# ">FORGE</a></li>
+                                <li><a href="#">HUMAN PARTS</a></li>
+                                <li><a href="# ">MARKER</a></li>
+                                <li><a href="#">LEVEL</a></li>
+                                <li><a href="#">HEATED</a></li>
+                                <li><a href="#">MORE</a></li>
+                            </ul>
+                            <div class="ml-2 cursor-hand nav-control right" onclick="scrollRight()">&RightAngleBracket;</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id='popover-component' class="d-none">
+        <div class="popover-body">
+            <ul>
+                <li><a href="#" class="action-click text-muted" data-action="1">Dismiss this story</a></li>
+                <li><a href="#" class="action-click text-muted" data-action="2">Mute this author</a></li>
+                <li><a href="#" class="action-click text-muted" data-action="3">Mute this publication</a></li>
+            </ul>
+        </div>
+    </div>
+    </div>
+    <div id="popover-componentUser" class="d-none">
+        <div class="card popover-body" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title text-dark font-weight-bolder ">Sarah emerson</h5>
+                <p class="card-tex text-muted ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ab
+                    repellat, exercitationem eius quasi repudiandae vel illo eligendi dicta vero!</p>
+                <hr>
+                <div class="d-flex justify-content-between align-items-center">
+                    <p class="m-0">Followed by1.2K people</p>
+                    <div class="btn btn border-success text-success align-items-center ">Follow</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="container-fluid">
+        <div class="row justify-content-between">
+            <!--TARJETA INZQUIERDA-->
+
+               <div class="col12 col-md-6 col-lg-4 post-card" data-post-id="rs1"></div>
+
+            <!--TARJETA CENTRO-->
+            <div class="col-12 col-md-6 col-lg-4 section-a-center-card" data-post-id="rs2"></div>
+
+            <!--TARJETA DERECHA-->
+            <div class="col-12 col-md-6 col-lg-4 d-none d-lg-block" data-post-id="rs3"></div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-10 see-editors">
+                <a href="#">SEE EDITOR´S PICKS</a>
+                <hr>
+            </div>
+        </div>
+    </section>
+
+    <section class="container">
+        <div class="row">
+            <div id="general-cards" class=" col-12 col-lg-8 pr-md-5">
+
+                <div id="card-learn" class="card border-0 bg-light d-none d-lg-block">
+                    <div class="card-body">
+                        <div class="text-right">
+                            <a href="#" class="text-muted card-body-closed">X</a>
+                        </div>
+                        <h5 class="card-title">A new way to control your experience</h5>
+                        <p class="card-text">
+                            Hide content from authors or publications on your Medium homepage and in emails by clicking the more icon (…) and selecting mute.
+                        </p>
+                        <a href="#" class="btn btn-learn cursor-hand">Learn more</a>
+                    </div>
+                </div>
+
+                <div class="row pt-5">
+                    <div class="col-8 col-md-9 text-card-section">
+                        <p class="text-muted mb-1">BASED ON YOUR READING HISTORY</p>
+                        <h5 class="font-weight-bold mb-1">The "Perfect Friendship" According to Aristotle</h5>
+                        <p class="text-muted">Why some friendship last and others fade?</p>
+                        <div class="row">
+                            <div class="col-6">
+                                <!-- <span class="text-dark">Jay Butera</span><br> -->
+                                <div class="anchor"><a href="#">Nikolas Göke</a> in <a href="#">Forge</a>
+                                </div>
+                                <span class="text-muted">Jan 1, 2019 &CenterDot; 5 min read</span>
+                            </div>
+                            <div class="col-6 d-flex align-self-end justify-content-end">
+                                <span class="svgIcon svgIcon--bookmark svgIcon--25px">
+                                    <svg class="svgIcon-use" width="25" height="25">
+                                        <path
+                                            d="M19 6c0-1.1-.9-2-2-2H8c-1.1 0-2 .9-2 2v14.66h.012c.01.103.045.204.12.285a.5.5 0 0 0 .706.03L12.5 16.85l5.662 4.126a.508.508 0 0 0 .708-.03.5.5 0 0 0 .118-.285H19V6zm-6.838 9.97L7 19.636V6c0-.55.45-1 1-1h9c.55 0 1 .45 1 1v13.637l-5.162-3.668a.49.49 0 0 0-.676 0z"
+                                            fill-rule="evenodd"></path>
+                                    </svg>
+                                </span>
+                                <span class="svgIcon svgIcon--moreFilled svgIcon--25px is-flushRight">
+                                    <svg class="svgIcon-use" width="25" height="25">
+                                        <path
+                                            d="M5 12.5c0 .552.195 1.023.586 1.414.39.39.862.586 1.414.586.552 0 1.023-.195 1.414-.586.39-.39.586-.862.586-1.414 0-.552-.195-1.023-.586-1.414A1.927 1.927 0 0 0 7 10.5c-.552 0-1.023.195-1.414.586-.39.39-.586.862-.586 1.414zm5.617 0c0 .552.196 1.023.586 1.414.391.39.863.586 1.414.586.552 0 1.023-.195 1.414-.586.39-.39.586-.862.586-1.414 0-.552-.195-1.023-.586-1.414a1.927 1.927 0 0 0-1.414-.586c-.551 0-1.023.195-1.414.586-.39.39-.586.862-.586 1.414zm5.6 0c0 .552.195 1.023.586 1.414.39.39.868.586 1.432.586.551 0 1.023-.195 1.413-.586.391-.39.587-.862.587-1.414 0-.552-.196-1.023-.587-1.414a1.927 1.927 0 0 0-1.413-.586c-.565 0-1.042.195-1.432.586-.39.39-.586.862-.587 1.414z"
+                                            fill-rule="evenodd"></path>
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4 col-md-3">
+                        <img class="w-100" src="https://miro.medium.com/max/1400/1*qQB3wK0mrY_qo8Jd4JY2kw.jpeg" alt="img1">
+                    </div>
+                </div>
+
+                <div class="row pt-5">
+                    <div class="col-8 col-md-9 text-card-section">
+                        <p class="text-muted mb-1">BASED ON YOUR READING HISTORY</p>
+                        <h5 class="font-weight-bold mb-1">How To Make Any Person Open Up And Feel Deeply Connected to You
+                        </h5>
+                        <p class="text-muted">Everything I learned from analizing my relationships for 6 months</p>
+                        <div class="row">
+                            <div class="col-6">
+                                <!-- <span class="text-dark">Jay Butera</span><br> -->
+                                <div class="anchor"><a href="#">Julia Horvarth</a> in <a href="#">Better Humans</a>
+                                </div>
+                                <span class="text-muted">Oct 22, 2019 &CenterDot; 18 min read</span>
+                            </div>
+                            <div class="col-6 d-flex align-self-end justify-content-end">
+                                <span class="svgIcon svgIcon--bookmark svgIcon--25px">
+                                    <svg class="svgIcon-use" width="25" height="25">
+                                        <path
+                                            d="M19 6c0-1.1-.9-2-2-2H8c-1.1 0-2 .9-2 2v14.66h.012c.01.103.045.204.12.285a.5.5 0 0 0 .706.03L12.5 16.85l5.662 4.126a.508.508 0 0 0 .708-.03.5.5 0 0 0 .118-.285H19V6zm-6.838 9.97L7 19.636V6c0-.55.45-1 1-1h9c.55 0 1 .45 1 1v13.637l-5.162-3.668a.49.49 0 0 0-.676 0z"
+                                            fill-rule="evenodd"></path>
+                                    </svg>
+                                </span>
+                                <span class="svgIcon svgIcon--moreFilled svgIcon--25px is-flushRight">
+                                    <svg class="svgIcon-use" width="25" height="25">
+                                        <path
+                                            d="M5 12.5c0 .552.195 1.023.586 1.414.39.39.862.586 1.414.586.552 0 1.023-.195 1.414-.586.39-.39.586-.862.586-1.414 0-.552-.195-1.023-.586-1.414A1.927 1.927 0 0 0 7 10.5c-.552 0-1.023.195-1.414.586-.39.39-.586.862-.586 1.414zm5.617 0c0 .552.196 1.023.586 1.414.391.39.863.586 1.414.586.552 0 1.023-.195 1.414-.586.39-.39.586-.862.586-1.414 0-.552-.195-1.023-.586-1.414a1.927 1.927 0 0 0-1.414-.586c-.551 0-1.023.195-1.414.586-.39.39-.586.862-.586 1.414zm5.6 0c0 .552.195 1.023.586 1.414.39.39.868.586 1.432.586.551 0 1.023-.195 1.413-.586.391-.39.587-.862.587-1.414 0-.552-.196-1.023-.587-1.414a1.927 1.927 0 0 0-1.413-.586c-.565 0-1.042.195-1.432.586-.39.39-.586.862-.587 1.414z"
+                                            fill-rule="evenodd"></path>
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4 col-md-3">
+                        <img class="w-100" src="https://miro.medium.com/max/1400/1*NoXGvKsELMXyGNne_V9GVw.jpeg" alt="img1">
+                    </div>
+                </div>
+
+
+                <div class="row pt-5">
+                    <div class="col-8 col-md-9 text-card-section">
+                        <p class="text-muted mb-1">BASED ON YOUR READING HISTORY</p>
+                        <h5 class="font-weight-bold mb-1">How To Be Kind To Yourself: Stop Chasing Self-Confidence</h5>
+                        <p class="text-muted">The enemy lies within</p>
+                        <div class="row">
+                            <div class="col-6">
+                                <!-- <span class="text-dark">Jay Butera</span><br> -->
+                                <div class="anchor"><a href="#"> Gustavo Razzeti </a> in <a href="#">Personal Growth</a>
+                                </div>
+                                <span class="text-muted">Jul 8, 2018 &CenterDot; 8 min read</span>
+                            </div>
+                            <div class="col-6 d-flex align-self-end justify-content-end">
+                                <span class="svgIcon svgIcon--bookmark svgIcon--25px">
+                                    <svg class="svgIcon-use" width="25" height="25">
+                                        <path
+                                            d="M19 6c0-1.1-.9-2-2-2H8c-1.1 0-2 .9-2 2v14.66h.012c.01.103.045.204.12.285a.5.5 0 0 0 .706.03L12.5 16.85l5.662 4.126a.508.508 0 0 0 .708-.03.5.5 0 0 0 .118-.285H19V6zm-6.838 9.97L7 19.636V6c0-.55.45-1 1-1h9c.55 0 1 .45 1 1v13.637l-5.162-3.668a.49.49 0 0 0-.676 0z"
+                                            fill-rule="evenodd"></path>
+                                    </svg>
+                                </span>
+                                <span class="svgIcon svgIcon--moreFilled svgIcon--25px is-flushRight">
+                                    <svg class="svgIcon-use" width="25" height="25">
+                                        <path
+                                            d="M5 12.5c0 .552.195 1.023.586 1.414.39.39.862.586 1.414.586.552 0 1.023-.195 1.414-.586.39-.39.586-.862.586-1.414 0-.552-.195-1.023-.586-1.414A1.927 1.927 0 0 0 7 10.5c-.552 0-1.023.195-1.414.586-.39.39-.586.862-.586 1.414zm5.617 0c0 .552.196 1.023.586 1.414.391.39.863.586 1.414.586.552 0 1.023-.195 1.414-.586.39-.39.586-.862.586-1.414 0-.552-.195-1.023-.586-1.414a1.927 1.927 0 0 0-1.414-.586c-.551 0-1.023.195-1.414.586-.39.39-.586.862-.586 1.414zm5.6 0c0 .552.195 1.023.586 1.414.39.39.868.586 1.432.586.551 0 1.023-.195 1.413-.586.391-.39.587-.862.587-1.414 0-.552-.196-1.023-.587-1.414a1.927 1.927 0 0 0-1.413-.586c-.565 0-1.042.195-1.432.586-.39.39-.586.862-.587 1.414z"
+                                            fill-rule="evenodd"></path>
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4 col-md-3">
+                        <img class="w-100" src="https://miro.medium.com/max/4000/1*AxoKkS1CCUI7Mw74hP23Ug.jpeg" alt="img1">
+                    </div>
+                </div>
+
+                <div class="row pt-5">
+                    <div class="col-8 col-md-9 text-card-section">
+                        <p class="text-muted mb-1">BASED ON YOUR READING HISTORY</p>
+                        <h5 class="font-weight-bold mb-1">31 Important Things You Should Say "No" to for Happier Life
+                        </h5>
+                        <p class="text-muted">And how to do it</p>
+                        <div class="row">
+                            <div class="col-6">
+                                <!-- <span class="text-dark">Jay Butera</span><br> -->
+                                <div class="anchor"><a href="#">Danny Forest</a> in <a href="#">Forge</a>
+                                </div>
+                                <span class="text-muted">Feb 19, 2019 &CenterDot; 17 min read</span>
+                            </div>
+                            <div class="col-6 d-flex align-self-end justify-content-end">
+                                <span class="svgIcon svgIcon--bookmark svgIcon--25px">
+                                    <svg class="svgIcon-use" width="25" height="25">
+                                        <path
+                                            d="M19 6c0-1.1-.9-2-2-2H8c-1.1 0-2 .9-2 2v14.66h.012c.01.103.045.204.12.285a.5.5 0 0 0 .706.03L12.5 16.85l5.662 4.126a.508.508 0 0 0 .708-.03.5.5 0 0 0 .118-.285H19V6zm-6.838 9.97L7 19.636V6c0-.55.45-1 1-1h9c.55 0 1 .45 1 1v13.637l-5.162-3.668a.49.49 0 0 0-.676 0z"
+                                            fill-rule="evenodd"></path>
+                                    </svg>
+                                </span>
+                                <span class="svgIcon svgIcon--moreFilled svgIcon--25px is-flushRight">
+                                    <svg class="svgIcon-use" width="25" height="25">
+                                        <path
+                                            d="M5 12.5c0 .552.195 1.023.586 1.414.39.39.862.586 1.414.586.552 0 1.023-.195 1.414-.586.39-.39.586-.862.586-1.414 0-.552-.195-1.023-.586-1.414A1.927 1.927 0 0 0 7 10.5c-.552 0-1.023.195-1.414.586-.39.39-.586.862-.586 1.414zm5.617 0c0 .552.196 1.023.586 1.414.391.39.863.586 1.414.586.552 0 1.023-.195 1.414-.586.39-.39.586-.862.586-1.414 0-.552-.195-1.023-.586-1.414a1.927 1.927 0 0 0-1.414-.586c-.551 0-1.023.195-1.414.586-.39.39-.586.862-.586 1.414zm5.6 0c0 .552.195 1.023.586 1.414.39.39.868.586 1.432.586.551 0 1.023-.195 1.413-.586.391-.39.587-.862.587-1.414 0-.552-.196-1.023-.587-1.414a1.927 1.927 0 0 0-1.413-.586c-.565 0-1.042.195-1.432.586-.39.39-.586.862-.587 1.414z"
+                                            fill-rule="evenodd"></path>
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4 col-md-3">
+                        <img class="w-100" src="https://miro.medium.com/max/4320/1*Z_0IxsCoeplEYO4xH211qQ.png" alt="img1">
+                    </div>
+                </div>
+                <div class="row pt-5">
+                    <div class="col-8 col-md-9 text-card-section">
+                        <p class="text-muted mb-1">BASED ON YOUR READING HISTORY</p>
+                        <h5 class="font-weight-bold mb-1">Here´s What Happens When You Finally Go To The Next Level Of Your Life</h5>
+                        <p class="text-muted">"Every next level of your life will demand a different you"</p>
+                        <div class="row">
+                            <div class="col-6">
+                                <!-- <span class="text-dark">Jay Butera</span><br> -->
+                                <div class="anchor"><a href="#">Reece Robertson</a> in <a href="#">The Ascent</a>
+                                </div>
+                                <span class="text-muted">July 18, 2019 &CenterDot; 4 min read</span>
+                            </div>
+                            <div class="col-6 d-flex align-self-end justify-content-end">
+                                <span class="svgIcon svgIcon--bookmark svgIcon--25px">
+                                    <svg class="svgIcon-use" width="25" height="25">
+                                        <path
+                                            d="M19 6c0-1.1-.9-2-2-2H8c-1.1 0-2 .9-2 2v14.66h.012c.01.103.045.204.12.285a.5.5 0 0 0 .706.03L12.5 16.85l5.662 4.126a.508.508 0 0 0 .708-.03.5.5 0 0 0 .118-.285H19V6zm-6.838 9.97L7 19.636V6c0-.55.45-1 1-1h9c.55 0 1 .45 1 1v13.637l-5.162-3.668a.49.49 0 0 0-.676 0z"
+                                            fill-rule="evenodd"></path>
+                                    </svg>
+                                </span>
+                                <span class="svgIcon svgIcon--moreFilled svgIcon--25px is-flushRight">
+                                    <svg class="svgIcon-use" width="25" height="25">
+                                        <path
+                                            d="M5 12.5c0 .552.195 1.023.586 1.414.39.39.862.586 1.414.586.552 0 1.023-.195 1.414-.586.39-.39.586-.862.586-1.414 0-.552-.195-1.023-.586-1.414A1.927 1.927 0 0 0 7 10.5c-.552 0-1.023.195-1.414.586-.39.39-.586.862-.586 1.414zm5.617 0c0 .552.196 1.023.586 1.414.391.39.863.586 1.414.586.552 0 1.023-.195 1.414-.586.39-.39.586-.862.586-1.414 0-.552-.195-1.023-.586-1.414a1.927 1.927 0 0 0-1.414-.586c-.551 0-1.023.195-1.414.586-.39.39-.586.862-.586 1.414zm5.6 0c0 .552.195 1.023.586 1.414.39.39.868.586 1.432.586.551 0 1.023-.195 1.413-.586.391-.39.587-.862.587-1.414 0-.552-.196-1.023-.587-1.414a1.927 1.927 0 0 0-1.413-.586c-.565 0-1.042.195-1.432.586-.39.39-.586.862-.587 1.414z"
+                                            fill-rule="evenodd"></path>
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4 col-md-3">
+                        <img class="w-100" src="https://miro.medium.com/max/4320/1*hR4wtkt8ssVKwgHMkKhgRQ.jpeg" alt="img1">
+                    </div>
+                </div>
+                <div class="row pt-5">
+                    <div class="col-8 col-md-9 text-card-section">
+                        <p class="text-muted mb-1">BASED ON YOUR READING HISTORY</p>
+                        <h5 class="font-weight-bold mb-1">7 Habits of Super Organized People</h5>
+                        <p class="text-muted">Your problems are tied to feel god short term.</p>
+                        <div class="row">
+                            <div class="col-6">
+                                <!-- <span class="text-dark">Jay Butera</span><br> -->
+                                <div class="anchor"><a href="#">Ayodeji Awosika</a> in <a href="#">Mind Cafe</a>
+                                </div>
+                                <span class="text-muted">Mar 10, 2019 &CenterDot; 10 min read</span>
+                            </div>
+                            <div class="col-6 d-flex align-self-end justify-content-end">
+                                <span class="svgIcon svgIcon--bookmark svgIcon--25px">
+                                    <svg class="svgIcon-use" width="25" height="25">
+                                        <path
+                                            d="M19 6c0-1.1-.9-2-2-2H8c-1.1 0-2 .9-2 2v14.66h.012c.01.103.045.204.12.285a.5.5 0 0 0 .706.03L12.5 16.85l5.662 4.126a.508.508 0 0 0 .708-.03.5.5 0 0 0 .118-.285H19V6zm-6.838 9.97L7 19.636V6c0-.55.45-1 1-1h9c.55 0 1 .45 1 1v13.637l-5.162-3.668a.49.49 0 0 0-.676 0z"
+                                            fill-rule="evenodd"></path>
+                                    </svg>
+                                </span>
+                                <span class="svgIcon svgIcon--moreFilled svgIcon--25px is-flushRight">
+                                    <svg class="svgIcon-use" width="25" height="25">
+                                        <path
+                                            d="M5 12.5c0 .552.195 1.023.586 1.414.39.39.862.586 1.414.586.552 0 1.023-.195 1.414-.586.39-.39.586-.862.586-1.414 0-.552-.195-1.023-.586-1.414A1.927 1.927 0 0 0 7 10.5c-.552 0-1.023.195-1.414.586-.39.39-.586.862-.586 1.414zm5.617 0c0 .552.196 1.023.586 1.414.391.39.863.586 1.414.586.552 0 1.023-.195 1.414-.586.39-.39.586-.862.586-1.414 0-.552-.195-1.023-.586-1.414a1.927 1.927 0 0 0-1.414-.586c-.551 0-1.023.195-1.414.586-.39.39-.586.862-.586 1.414zm5.6 0c0 .552.195 1.023.586 1.414.39.39.868.586 1.432.586.551 0 1.023-.195 1.413-.586.391-.39.587-.862.587-1.414 0-.552-.196-1.023-.587-1.414a1.927 1.927 0 0 0-1.413-.586c-.565 0-1.042.195-1.432.586-.39.39-.586.862-.587 1.414z"
+                                            fill-rule="evenodd"></path>
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4 col-md-3">
+                        <img class="w-100" src="https://miro.medium.com/max/2000/1*tM-cIfTKmNoL_-1daQfzeg.png" alt="img1">
+                    </div>
+                </div>
+                <div class="row pt-5">
+                    <div class="col-8 col-md-9 text-card-section">
+                        <p class="text-muted mb-1">BASED ON YOUR READING HISTORY</p>
+                        <h5 class="font-weight-bold mb-1">How To Solve Your "Lack of Motivation" Problem</h5>
+                        <p class="text-muted">Hint: Understand the lack motivation is a lie.</p>
+                        <div class="row">
+                            <div class="col-6">
+                                <!-- <span class="text-dark">Jay Butera</span><br> -->
+                                <div class="anchor"><a href="#">Ayodeji Awosika</a> in <a href="#">Mind Cafe</a>
+                                </div>
+                                <span class="text-muted">Jan 1, 2019 &CenterDot; 5 min read</span>
+                            </div>
+                            <div class="col-6 d-flex align-self-end justify-content-end">
+                                <span class="svgIcon svgIcon--bookmark svgIcon--25px">
+                                    <svg class="svgIcon-use" width="25" height="25">
+                                        <path
+                                            d="M19 6c0-1.1-.9-2-2-2H8c-1.1 0-2 .9-2 2v14.66h.012c.01.103.045.204.12.285a.5.5 0 0 0 .706.03L12.5 16.85l5.662 4.126a.508.508 0 0 0 .708-.03.5.5 0 0 0 .118-.285H19V6zm-6.838 9.97L7 19.636V6c0-.55.45-1 1-1h9c.55 0 1 .45 1 1v13.637l-5.162-3.668a.49.49 0 0 0-.676 0z"
+                                            fill-rule="evenodd"></path>
+                                    </svg>
+                                </span>
+                                <span class="svgIcon svgIcon--moreFilled svgIcon--25px is-flushRight">
+                                    <svg class="svgIcon-use" width="25" height="25">
+                                        <path
+                                            d="M5 12.5c0 .552.195 1.023.586 1.414.39.39.862.586 1.414.586.552 0 1.023-.195 1.414-.586.39-.39.586-.862.586-1.414 0-.552-.195-1.023-.586-1.414A1.927 1.927 0 0 0 7 10.5c-.552 0-1.023.195-1.414.586-.39.39-.586.862-.586 1.414zm5.617 0c0 .552.196 1.023.586 1.414.391.39.863.586 1.414.586.552 0 1.023-.195 1.414-.586.39-.39.586-.862.586-1.414 0-.552-.195-1.023-.586-1.414a1.927 1.927 0 0 0-1.414-.586c-.551 0-1.023.195-1.414.586-.39.39-.586.862-.586 1.414zm5.6 0c0 .552.195 1.023.586 1.414.39.39.868.586 1.432.586.551 0 1.023-.195 1.413-.586.391-.39.587-.862.587-1.414 0-.552-.196-1.023-.587-1.414a1.927 1.927 0 0 0-1.413-.586c-.565 0-1.042.195-1.432.586-.39.39-.586.862-.587 1.414z"
+                                            fill-rule="evenodd"></path>
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4 col-md-3">
+                        <img class="w-100" src="https://miro.medium.com/max/2000/1*QgDKaDt4RmXJrFAypb8M9Q.png" alt="img1">
+                    </div>
+                </div>
+                <div class="row pt-5">
+                    <div class="col-8 col-md-9 text-card-section">
+                        <p class="text-muted mb-1">BASED ON YOUR READING HISTORY</p>
+                        <h5 class="font-weight-bold mb-1">I Meditated For 95 Days In A Row</h5>
+                        <p class="text-muted">Here´s what happened.</p>
+                        <div class="row">
+                            <div class="col-6">
+                                <!-- <span class="text-dark">Jay Butera</span><br> -->
+                                <div class="anchor"><a href="#">Arlie Peyton</a> in <a href="#">The Ascent</a>
+                                </div>
+                                <span class="text-muted">Jan 19, 2019 &CenterDot; 10 min read</span>
+                            </div>
+                            <div class="col-6 d-flex align-self-end justify-content-end">
+                                <span class="svgIcon svgIcon--bookmark svgIcon--25px">
+                                    <svg class="svgIcon-use" width="25" height="25">
+                                        <path
+                                            d="M19 6c0-1.1-.9-2-2-2H8c-1.1 0-2 .9-2 2v14.66h.012c.01.103.045.204.12.285a.5.5 0 0 0 .706.03L12.5 16.85l5.662 4.126a.508.508 0 0 0 .708-.03.5.5 0 0 0 .118-.285H19V6zm-6.838 9.97L7 19.636V6c0-.55.45-1 1-1h9c.55 0 1 .45 1 1v13.637l-5.162-3.668a.49.49 0 0 0-.676 0z"
+                                            fill-rule="evenodd"></path>
+                                    </svg>
+                                </span>
+                                <span class="svgIcon svgIcon--moreFilled svgIcon--25px is-flushRight">
+                                    <svg class="svgIcon-use" width="25" height="25">
+                                        <path
+                                            d="M5 12.5c0 .552.195 1.023.586 1.414.39.39.862.586 1.414.586.552 0 1.023-.195 1.414-.586.39-.39.586-.862.586-1.414 0-.552-.195-1.023-.586-1.414A1.927 1.927 0 0 0 7 10.5c-.552 0-1.023.195-1.414.586-.39.39-.586.862-.586 1.414zm5.617 0c0 .552.196 1.023.586 1.414.391.39.863.586 1.414.586.552 0 1.023-.195 1.414-.586.39-.39.586-.862.586-1.414 0-.552-.195-1.023-.586-1.414a1.927 1.927 0 0 0-1.414-.586c-.551 0-1.023.195-1.414.586-.39.39-.586.862-.586 1.414zm5.6 0c0 .552.195 1.023.586 1.414.39.39.868.586 1.432.586.551 0 1.023-.195 1.413-.586.391-.39.587-.862.587-1.414 0-.552-.196-1.023-.587-1.414a1.927 1.927 0 0 0-1.413-.586c-.565 0-1.042.195-1.432.586-.39.39-.586.862-.587 1.414z"
+                                            fill-rule="evenodd"></path>
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4 col-md-3">
+                        <img class="w-100" src="https://miro.medium.com/max/4320/1*wsFtlV5PsWL_LlXSwl_4Hg.jpeg" alt="img1">
+                    </div>
+                </div>
+                <div class="row pt-5">
+                    <div class="col-8 col-md-9 text-card-section">
+                        <p class="text-muted mb-1">BASED ON YOUR READING HISTORY</p>
+                        <h5 class="font-weight-bold mb-1">How To Permanently Stay Motivated</h5>
+                        <p class="text-muted">Extrinsic motivation is finckle and unreliable. Here´s how to find it within.
+                        </p>
+                        <div class="row">
+                            <div class="col-6">
+                                <!-- <span class="text-dark">Jay Butera</span><br> -->
+                                <div class="anchor"><a href="#">Ayodeji Awosika</a> in <a href="#">Mind Cafe</a>
+                                </div>
+                                <span class="text-muted">Dec 12, 2019 &CenterDot; 8 min read</span>
+                            </div>
+                            <div class="col-6 d-flex align-self-end justify-content-end">
+                                <span class="svgIcon svgIcon--bookmark svgIcon--25px">
+                                    <svg class="svgIcon-use" width="25" height="25">
+                                        <path
+                                            d="M19 6c0-1.1-.9-2-2-2H8c-1.1 0-2 .9-2 2v14.66h.012c.01.103.045.204.12.285a.5.5 0 0 0 .706.03L12.5 16.85l5.662 4.126a.508.508 0 0 0 .708-.03.5.5 0 0 0 .118-.285H19V6zm-6.838 9.97L7 19.636V6c0-.55.45-1 1-1h9c.55 0 1 .45 1 1v13.637l-5.162-3.668a.49.49 0 0 0-.676 0z"
+                                            fill-rule="evenodd"></path>
+                                    </svg>
+                                </span>
+                                <span class="svgIcon svgIcon--moreFilled svgIcon--25px is-flushRight">
+                                    <svg class="svgIcon-use" width="25" height="25">
+                                        <path
+                                            d="M5 12.5c0 .552.195 1.023.586 1.414.39.39.862.586 1.414.586.552 0 1.023-.195 1.414-.586.39-.39.586-.862.586-1.414 0-.552-.195-1.023-.586-1.414A1.927 1.927 0 0 0 7 10.5c-.552 0-1.023.195-1.414.586-.39.39-.586.862-.586 1.414zm5.617 0c0 .552.196 1.023.586 1.414.391.39.863.586 1.414.586.552 0 1.023-.195 1.414-.586.39-.39.586-.862.586-1.414 0-.552-.195-1.023-.586-1.414a1.927 1.927 0 0 0-1.414-.586c-.551 0-1.023.195-1.414.586-.39.39-.586.862-.586 1.414zm5.6 0c0 .552.195 1.023.586 1.414.39.39.868.586 1.432.586.551 0 1.023-.195 1.413-.586.391-.39.587-.862.587-1.414 0-.552-.196-1.023-.587-1.414a1.927 1.927 0 0 0-1.413-.586c-.565 0-1.042.195-1.432.586-.39.39-.586.862-.587 1.414z"
+                                            fill-rule="evenodd"></path>
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4 col-md-3">
+                        <img class="w-100" src="https://miro.medium.com/max/2000/1*LwG5khNzjG4Ue6yifx3rtg.jpeg" alt="img1">
+                    </div>
+                </div>
+                <div class="row pt-5">
+                    <div class="col-8 col-md-9 text-card-section">
+                        <p class="text-muted mb-1">BASED ON YOUR READING HISTORY</p>
+                        <h5 class="font-weight-bold mb-1">4 Habits Everyone Needs for Better Mental Health</h5>
+                        <p class="text-muted">You are what you habitually do.</p>
+                        <div class="row">
+                            <div class="col-6">
+                                <!-- <span class="text-dark">Jay Butera</span><br> -->
+                                <div class="anchor"><a href="#">Nick Wignall</a> in <a href="#">Personal Growth</a>
+                                </div>
+                                <span class="text-muted">Apr 11 &CenterDot; 8 min read</span>
+                            </div>
+                            <div class="col-6 d-flex align-self-end justify-content-end">
+                                <span class="svgIcon svgIcon--bookmark svgIcon--25px">
+                                    <svg class="svgIcon-use" width="25" height="25">
+                                        <path
+                                            d="M19 6c0-1.1-.9-2-2-2H8c-1.1 0-2 .9-2 2v14.66h.012c.01.103.045.204.12.285a.5.5 0 0 0 .706.03L12.5 16.85l5.662 4.126a.508.508 0 0 0 .708-.03.5.5 0 0 0 .118-.285H19V6zm-6.838 9.97L7 19.636V6c0-.55.45-1 1-1h9c.55 0 1 .45 1 1v13.637l-5.162-3.668a.49.49 0 0 0-.676 0z"
+                                            fill-rule="evenodd"></path>
+                                    </svg>
+                                </span>
+                                <span class="svgIcon svgIcon--moreFilled svgIcon--25px is-flushRight">
+                                    <svg class="svgIcon-use" width="25" height="25">
+                                        <path
+                                            d="M5 12.5c0 .552.195 1.023.586 1.414.39.39.862.586 1.414.586.552 0 1.023-.195 1.414-.586.39-.39.586-.862.586-1.414 0-.552-.195-1.023-.586-1.414A1.927 1.927 0 0 0 7 10.5c-.552 0-1.023.195-1.414.586-.39.39-.586.862-.586 1.414zm5.617 0c0 .552.196 1.023.586 1.414.391.39.863.586 1.414.586.552 0 1.023-.195 1.414-.586.39-.39.586-.862.586-1.414 0-.552-.195-1.023-.586-1.414a1.927 1.927 0 0 0-1.414-.586c-.551 0-1.023.195-1.414.586-.39.39-.586.862-.586 1.414zm5.6 0c0 .552.195 1.023.586 1.414.39.39.868.586 1.432.586.551 0 1.023-.195 1.413-.586.391-.39.587-.862.587-1.414 0-.552-.196-1.023-.587-1.414a1.927 1.927 0 0 0-1.413-.586c-.565 0-1.042.195-1.432.586-.39.39-.586.862-.587 1.414z"
+                                            fill-rule="evenodd"></path>
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4 col-md-3">
+                        <img class="w-100" src="https://miro.medium.com/max/1400/1*U6Mi5-bELw9Oriw64WzXeg.jpeg" alt="img1">
+                    </div>
+                </div>
+                <div class="row pt-5">
+                    <div class="col-8 col-md-9 text-card-section">
+                        <p class="text-muted mb-1">BASED ON YOUR READING HISTORY</p>
+                        <h5 class="font-weight-bold mb-1">Kakeibo: The Japanese Art Of Saving Money</h5>
+                        <p class="text-muted">The kakeibo was invented back in 1940 by Hani Motoko, Japan´s first female journalist.
+                        </p>
+                        <div class="row">
+                            <div class="col-6">
+                                <!-- <span class="text-dark">Jay Butera</span><br> -->
+                                <div class="anchor"><a href="#">Jaqui Agate</a> in <a href="#">Refinery29 UK</a>
+                                </div>
+                                <span class="text-muted">Feb 24&CenterDot; 5 min read</span>
+                            </div>
+                            <div class="col-6 d-flex align-self-end justify-content-end">
+                                <span class="svgIcon svgIcon--bookmark svgIcon--25px">
+                                    <svg class="svgIcon-use" width="25" height="25">
+                                        <path
+                                            d="M19 6c0-1.1-.9-2-2-2H8c-1.1 0-2 .9-2 2v14.66h.012c.01.103.045.204.12.285a.5.5 0 0 0 .706.03L12.5 16.85l5.662 4.126a.508.508 0 0 0 .708-.03.5.5 0 0 0 .118-.285H19V6zm-6.838 9.97L7 19.636V6c0-.55.45-1 1-1h9c.55 0 1 .45 1 1v13.637l-5.162-3.668a.49.49 0 0 0-.676 0z"
+                                            fill-rule="evenodd"></path>
+                                    </svg>
+                                </span>
+                                <span class="svgIcon svgIcon--moreFilled svgIcon--25px is-flushRight">
+                                    <svg class="svgIcon-use" width="25" height="25">
+                                        <path
+                                            d="M5 12.5c0 .552.195 1.023.586 1.414.39.39.862.586 1.414.586.552 0 1.023-.195 1.414-.586.39-.39.586-.862.586-1.414 0-.552-.195-1.023-.586-1.414A1.927 1.927 0 0 0 7 10.5c-.552 0-1.023.195-1.414.586-.39.39-.586.862-.586 1.414zm5.617 0c0 .552.196 1.023.586 1.414.391.39.863.586 1.414.586.552 0 1.023-.195 1.414-.586.39-.39.586-.862.586-1.414 0-.552-.195-1.023-.586-1.414a1.927 1.927 0 0 0-1.414-.586c-.551 0-1.023.195-1.414.586-.39.39-.586.862-.586 1.414zm5.6 0c0 .552.195 1.023.586 1.414.39.39.868.586 1.432.586.551 0 1.023-.195 1.413-.586.391-.39.587-.862.587-1.414 0-.552-.196-1.023-.587-1.414a1.927 1.927 0 0 0-1.413-.586c-.565 0-1.042.195-1.432.586-.39.39-.586.862-.587 1.414z"
+                                            fill-rule="evenodd"></path>
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4 col-md-3">
+                        <img class="w-100" src="https://miro.medium.com/max/1400/1*sEqch0PqwwOHyxttFBMcQw.jpeg" alt="img1">
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-12 col-lg-4">
+                <aside class="mt-5 mt-md-0 d-none d-lg-block">
+                    <div class="d-flex flex-row justify-content-between align-items-end network-color">
+                        <h4>New from your network</h4>
+                        <img src="https://cdn-images-1.medium.com/proxy/1*K3oqw1Ed_6VMaql4HojuDg.png" alt="img1">
+                    </div>
+
+                    <div class="d-flex flex-column justify-content-between align-items-center network-content-color">
+                        <div class="row mb-4 w-100">
+                            <div class="col-2 text-muted">
+                                <img src="https://cdn-images-1.medium.com/fit/c/40/40/1*ORBSkDWaQR4xWvhpNLkpUQ.jpeg" alt="..." class="rounded-circle">
+                            </div>
+                            <div class="col-10 text-left">
+                                <h6>Looking for the positive </h6>
+                                <div class="anchor"><a href="#">Dan Petersen</a> in <a href="#">Personal Growth</a>
+                                </div>
+                                <span class="text-muted text-aside">May 16 &CenterDot; 2 min read &starf;</span>
+                            </div>
+                        </div>
+
+                        <div class="row mb-4 w-100">
+                            <div class="col-2 text-muted">
+                                <img src="https://cdn-images-1.medium.com/fit/c/40/40/2*goy7ry8ZhVo8PxPB9E9Ayg.png" alt="..." class="rounded-circle">
+                            </div>
+                            <div class="col-10 text-left">
+                                <h6>A Taste of Travel With Atlas Obscura </h6>
+                                <div class="anchor"><a href="#">Alex Begin</a> in <a href="#">Unsplash Blog</a></div>
+                                <span class="text-muted text-aside">May 21 &CenterDot; 3 min read &starf;</span>
+                            </div>
+                        </div>
+
+                        <div class="row mb-4 w-100">
+                            <div class="col-2 text-muted">
+                                <img src="https://cdn-images-1.medium.com/fit/c/40/40/2*HUyDn-zIQGR9Z4v5byjDtA.jpeg" alt="..." class="rounded-circle">
+                            </div>
+                            <div class="col-10 text-left">
+                                <h6>How To Skyrocket Your Creative Growth </h6>
+                                <div class="anchor"><a href="#">John P. Weiss</a> in <a href="#">Personal Worth</a>
+                                </div>
+                                <span class="text-muted text-aside">a few hours ago &CenterDot; 5 min read
+                                    &starf;</span>
+                            </div>
+                        </div>
+
+                        <div class="row mb-4 w-100">
+                            <div class="col-2 text-muted">
+                                <img src="https://cdn-images-1.medium.com/fit/c/40/40/0*m8sXnw_8Zi-SIYvE.jpeg" alt="..." class="rounded-circle">
+                            </div>
+                            <div class="col-10 text-left">
+                                <h6>The United Nations joins Unsplash </h6>
+                                <div class="anchor"><a href="#">Mikael Cho</a> in <a href="#">Unsplash Blog</a></div>
+                                <span class="text-muted text-aside">May 7 &CenterDot; 8 min read &starf;</span>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+
+                <div class="popular-on-medium mt-3">
+                    <!-- title -->
+                    <h3 class="">Popular on Medium</h3>
+                    <hr>
+                    
+                    <!-- cards -->
+                    <div data-post-id="popularonmedium">
+                    </div>
+                    <hr>
+
+                    <!-- nav help -->
+                    <div class="nav-popular d-none d-lg-block">
+                        <a href="#">Help</a>
+                        <a href="#">Status</a>
+                        <a href="#">Writers</a>
+                        <a href="#">Blog</a>
+                        <a href="#">Careers</a>
+                        <a href="#">Privacy</a>
+                        <a href="#">Terms</a>
+                        <a href="#">About</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
